@@ -14,6 +14,28 @@
 </head>
 
 <body>
+
+<script runat="server" language="javascript">
+Platform.Load("Core","1");
+ 
+try {
+ 
+    var ip = Platform.Request.ClientIP;
+    var url = Platform.Request.RequestURL;
+    var time = Now();
+ 
+    Write(url);
+    Write(time);
+    Write(ip);
+ 
+} catch (ex) {
+ 
+    Write("An error has occurred: " + Stringify(ex));
+}
+</script>
+
+
+
 <h1>hello yopede</h1>
 
 
